@@ -30,11 +30,11 @@ const Header = () => {
                               <li className="hover:scale-105 duration-200">
                                     <Link to="/blogs">Blogs</Link>
                               </li>
-                              {
-                                    user && <li className="hover:scale-105 duration-200">
-                                          <Link to="/dashboard/createProject">Dashboard</Link>
-                                    </li>
-                              }
+
+                              <li className="hover:scale-105 duration-200">
+                                    <Link to="/dashboard/createProject">Dashboard</Link>
+                              </li>
+
                               {user ?
                                     <li className="flex items-center gap-2">
                                           <p className="hover:scale-105 duration-200">{user.email}</p>
