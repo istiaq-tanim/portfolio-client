@@ -4,7 +4,7 @@ import BlogCard from "../Components/BlogCard";
 import Loader from "../Components/Loader";
 
 const retrievedSkills = async () => {
-      const response = await axios.get("https://portfolio-server-puce-three.vercel.app/blogs")
+      const response = await axios.get("https://portfolio-new-server-phi.vercel.app/blogs")
       return response.data.response
 }
 

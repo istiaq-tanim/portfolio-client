@@ -10,7 +10,7 @@ const CreateBlog = () => {
 
       const { isSuccess, mutate } = useMutation({
             mutationFn: (blog) => {
-                  return axios.post("https://portfolio-server-puce-three.vercel.app/blogs", blog)
+                  return axios.post("https://portfolio-new-server-phi.vercel.app/blogs", blog)
             },
             onSuccess: () => {
                   queryClient.invalidateQueries(["blogs"])

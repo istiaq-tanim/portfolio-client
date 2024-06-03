@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import Loader from './Loader';
 
 const retrievedProjects = async ({ queryKey }) => {
-      const response = await axios.get(`https://portfolio-server-puce-three.vercel.app/${queryKey[0]}/${queryKey[1]}`);
+      const response = await axios.get(`https://portfolio-new-server-phi.vercel.app/${queryKey[0]}/${queryKey[1]}`);
       return response.data.response
 }
 
