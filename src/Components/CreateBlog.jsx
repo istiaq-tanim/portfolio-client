@@ -19,7 +19,7 @@ const CreateBlog = () => {
       const onSubmit = (data) => {
             const newData = { ...data, likes: parseInt(data.likes) }
             mutate(newData)
-            // reset()
+            reset()
       };
 
       if (isSuccess) {

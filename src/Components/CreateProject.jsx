@@ -30,6 +30,9 @@ const CreateProject = () => {
       }
       return (
             <div>
+                  <div className='text-center mt-10'>
+                        <h3 className='font-bold text-2xl'>Add Project</h3>
+                  </div>
                   <form onSubmit={handleSubmit(onSubmit)} className="bg-[#e3e0e0] mt-10">
                         <div className="form-control w-full px-5 pt-5">
                               <label className="label">
