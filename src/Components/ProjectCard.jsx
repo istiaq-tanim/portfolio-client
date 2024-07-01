@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
       return (
-
-
             <figure className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl transform transition duration-500 hover:scale-105">
                   <img className="w-full object-cover h-64" src={project.image} alt="" />
                   <figcaption className="pt-4">

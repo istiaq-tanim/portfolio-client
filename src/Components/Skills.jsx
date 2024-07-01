@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import Loader from './Loader';
 
 const retrievedSkills = async () => {
-    const response = await axios.get("https://portfolio-new-server-phi.vercel.app/skills")
+    const response = await axios.get("https://portfolio-server-puce-three.vercel.app/skills")
     return response.data.response
 }
 

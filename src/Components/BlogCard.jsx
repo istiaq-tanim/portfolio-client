@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const BlogCard = ({ blog }) => {
       return (
-            <div className="card w-full bg-base-100 shadow-xl">
+            <Link to={`/blogs/${blog._id}`} className="card w-full bg-base-100 shadow-xl cursor-pointer">
                   <figure>
                         <img className="rounded-xl h-64 pt-5" src={blog.image} alt="" />
                   </figure>
@@ -28,7 +29,7 @@ const BlogCard = ({ blog }) => {
                               </div>
                         </div>
                   </div>
-            </div>
+            </Link>
       );
 };
 

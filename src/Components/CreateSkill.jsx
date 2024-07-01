@@ -9,7 +9,7 @@ const CreateSkill = () => {
 
       const { isSuccess, mutate } = useMutation({
             mutationFn: (skill) => {
-                  return axios.post("https://portfolio-new-server-phi.vercel.app/skills", skill)
+                  return axios.post("https://portfolio-server-puce-three.vercel.app/skills", skill)
             },
             onSuccess: () => {
                   queryClient.invalidateQueries(["skills"])

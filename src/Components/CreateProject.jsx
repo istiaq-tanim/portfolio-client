@@ -8,7 +8,7 @@ const CreateProject = () => {
 
       const { isSuccess, mutate } = useMutation({
             mutationFn: (project) => {
-                  return axios.post("https://portfolio-new-server-phi.vercel.app/projects", project)
+                  return axios.post("https://portfolio-server-puce-three.vercel.app/projects", project)
             },
             onSuccess: () => {
                   queryClient.invalidateQueries(["projects"])

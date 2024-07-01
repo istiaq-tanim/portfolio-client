@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 
 
 const retrievedProjects = async () => {
-    const response = await axios.get("https://portfolio-new-server-phi.vercel.app/projects");
+    const response = await axios.get("https://portfolio-server-puce-three.vercel.app/projects");
     return response.data.response
 }
 
