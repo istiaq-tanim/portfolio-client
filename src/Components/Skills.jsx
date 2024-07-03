@@ -33,23 +33,29 @@ const Skills = () => {
         return <span>Error: {error.message}</span>
     }
     return (
-        <div name="skills" className="w-full">
-            <div className="max-w-screen-lg mx-auto px-4 flex flex-col justify-center h-full w-full text-center">
-                <div>
-
-                    <Fade className="text-4xl text-slate-600 font-bold inline border-b-4 border-zinc-500 text-center" delay={1e3} cascade damping={1e-1}>
+        <div name="skills" className="w-full my-20">
+            <div className="max-w-screen-xl mx-auto px-4 flex flex-col justify-center h-full w-full text-center">
+                <div className='pb-10'>
+                    <Fade className="text-4xl text-slate-600 font-bold inline  border-zinc-500  text-center" delay={1e3} cascade damping={1e-1}>
                         My Skills
                     </Fade>
-                    <p className="py-5">
-                        These are the Technology I have worked with</p>
+
                 </div>
 
-                <div className="grid grid-cols-2 w-full sm:grid-cols-3 gap-8 text-center py-6 px-8 sm:px-0">
+                <div className="grid grid-cols-2 w-full lg:grid-cols-5 gap-8 text-center py-6 px-8 sm:px-0">
                     {
-                        skills.map(({ _id, image, title, style }) =>
-                            <div key={_id} data-aos="flip-right" className={`shadow-xl hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
-                                <img className="w-20 mx-auto" src={image} alt="" />
-                                <p className="mt-4">{title}</p>
+                        skills.map(({ _id, image, title }) =>
+                            <div
+                                key={_id}
+                                data-aos="flip-right"
+                                className="shadow-xl border-4 hover:scale-110 duration-500 py-2 rounded-2xl flex flex-col h-full justify-center items-center"
+                            >
+                                <div className="flex-grow">
+                                    <img src={image} alt={title} className="w-20 h-auto rounded-lg pb-5" />
+                                </div>
+                                <div className="mt-auto">
+                                    <p className="text-center">{title}</p>
+                                </div>
                             </div>
                         )
                     }

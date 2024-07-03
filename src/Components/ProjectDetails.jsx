@@ -43,30 +43,46 @@ const ProjectDetails = () => {
                               </div>
                               <div className="col-span-8">
                                     <h2 className="font-bold text-slate-800 text-2xl">
-                                          {project?.title}
+                                          {project?.name}
                                     </h2>
                                     <p className="my-2 text-slate-800 italic">
-                                          {project?.description}
+                                          <span className='font-bold'>Overview:{" "}</span>{project?.overview}
                                     </p>
+
+                                    <div>
+                                          <p className='font-bold'>Features</p>
+                                          {
+                                                project.features.map((item) => <li className='text-justify' key={item}>{item}</li>)
+                                          }
+                                    </div>
+                                    <div>
+                                          <p className='font-bold py-2'>Technologies</p>
+                                          <div className='flex'>
+                                                {
+                                                      project.technologies.map((item) => <p className='text-justify' key={item}>{item},</p>)
+                                                }
+                                          </div>
+                                    </div>
+
                                     <ul className="text-slate-800 space-x-4 my-8">
                                           <a
-                                                href={project.client}
+                                                href={project?.client}
                                                 target="_blank" rel="noreferrer"
-                                                className="text-cyan-600 cursor-pointer bg-gray-800 px-2 py-1 inline-block"
+                                                className="text-[#ffffffd6] cursor-pointer bg-[#ee1b5e] px-2 py-1 inline-block"
                                           >
                                                 GitHub Client
                                           </a>
                                           <a
-                                                href={project.server}
+                                                href={project?.server}
                                                 target="_blank" rel="noreferrer"
-                                                className="text-cyan-600 cursor-pointer bg-gray-800 px-2 py-1 inline-block"
+                                                className="text-[#ffffffd6] cursor-pointer bg-[#ee1b5e] px-2 py-1 inline-block"
                                           >
                                                 GitHub Server
                                           </a>
                                           <a
-                                                href={project.liveLink}
+                                                href={project?.liveLink}
                                                 target="_blank" rel="noreferrer"
-                                                className="text-cyan-600 cursor-pointer bg-gray-800 px-2 py-1 inline-block"
+                                                className="text-[#ffffffd6] cursor-pointer bg-[#ee1b5e] px-2 py-1 inline-block"
                                           >
                                                 Live Demo
                                           </a>

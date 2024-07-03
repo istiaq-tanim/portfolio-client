@@ -14,11 +14,12 @@ const Header = () => {
                   .catch(error => console.log(error.message))
       }
       return (
-            <div className="bg-gray-300 opacity-90 px-4 py-5 mx-auto  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 sticky top-0 z-50">
+            <div className="bg-gray-300 opacity-90 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-12 sticky top-0 z-50">
+
                   <div className="relative flex items-center justify-between">
                         <Link to="/" className="inline-flex items-center">
                               <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
-                                    Kazi <span className="text-[#5AB2FF]">Istiaq Mahmaud</span>
+                                    Kazi <span className="text-[#f9004d]">Istiaq Mahmaud</span>
                               </span>
                         </Link>
 
@@ -31,9 +32,11 @@ const Header = () => {
                                     <Link to="/blogs">Blogs</Link>
                               </li>
 
-                              <li className="hover:scale-105 duration-200">
-                                    <Link to="/dashboard/createProject">Dashboard</Link>
-                              </li>
+                              {
+                                    user && <li className="hover:scale-105 duration-200">
+                                          <Link to="/dashboard/createProject">Dashboard</Link>
+                                    </li>
+                              }
 
                               {user ?
                                     <li className="flex items-center gap-2">

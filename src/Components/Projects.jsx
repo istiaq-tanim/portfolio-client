@@ -29,10 +29,10 @@ const Projects = () => {
 
 
     return (
-        <div name="projects" className="w-full mb-32">
+        <div name="projects" className="w-full my-20">
             <div className="text-center">
-                <h3 className="text-4xl font-semibold inline border-b-4 text-slate-600 border-zinc-500 text-center">
-                    <Fade className="text-4xl text-slate-600 font-bold inline border-b-4 border-zinc-500 text-center" delay={1e3} cascade damping={1e-1}>
+                <h3 className="text-4xl font-semibold inline  text-slate-600  text-center">
+                    <Fade className="text-4xl text-slate-600 font-bold inline border-zinc-500 text-center" delay={1e3} cascade damping={1e-1}>
                         My Projects
                     </Fade>
 
